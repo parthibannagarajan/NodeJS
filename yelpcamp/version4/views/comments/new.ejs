@@ -1,0 +1,17 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+<h1>welcome to the page to create new campground</h1>
+
+<a class = "btn btn-primary btn-md" href="/campgrounds">return to all camp ground</a>
+<br>
+<br>
+<h3>Add new comment to <%= campground.title %></h3>
+
+<form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+  <input type="text" placeholder="text" name="comment[text]">
+  <input type="text" placeholder="author" name="comment[author]">
+  <button>submit</button>
+</form>
+
+<% include ../partials/footer.ejs %>
+</div>
